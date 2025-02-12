@@ -1,66 +1,87 @@
-<!--HTML5 deklareerimine-->
+<!DOCTYPE html>
 <html lang="et">
-<!--kommetaar-->
 <head>
-    <title>Minu esimene veebileht</title>
+	<title>Minu esimene veebileht</title>
 	<meta charset="UTF-8">
-	<!--kodderind UTF8-->
-	<!--pöördume css faili sisse-->
 	<link rel="stylesheet" type="text/css" href="MyStyle.css">
-	
 </head>
 <body>
-    <!--päis-шапка страницы-->
-	<header>
-	    <h1>Aleksandra veebirakenduste koduleht</h1>
-	</header>
-	<!--navigeerimismenüü-->
-	<nav>
-		<ul>
-			<li><a href="index.html">Kodu</a></li>
-			<li><a href="lingid.html">Kasulikud lingid</a></li>
-			<li><a href="tood.html">Tehtud tööd/projektid</a></li>
-			<li><a href="valimus.html">Teine välimus</a></li>
-		</ul>
-		
-	</nav>
-	
-	<!--sisu-содержаниеv-->
-	<main>
-	    <section>
-		    <h2>Põhi teemad</h2>
-			<div>
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-			
-				</ul>
-			</div>
-		</section>   
-		<section>
-		    <h2>Wordpress'i teemad</h2>
-			<div>
-				<ol>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ol>
-			</div>
-		</section>
-		    
-	</main>
-	
-	<!--jalus-подвал-->
-	<footer>
-		<p>&copy;AleksandraS 2024</p>
-	</footer>
-	    
-    
-	
+<header>
+	<h1>Aleksandra veebirakenduste koduleht</h1>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="index.html">Kodu</a></li>
+		<li><a href="lingid.html">Kasulikud lingid</a></li>
+		<li><a href="tood.html">Tehtud tööd/projektid</a></li>
+		<li><a href="valimus.html">Teine välimus</a></li>
+	</ul>
+</nav>
+
+<main>
+	<section>
+		<h2>Põhi teemad</h2>
+		<div>
+			<ul>
+				<li>arvutimängud</li>
+				<li>Teema</li>
+				<li>Teema</li>
+				<li>Teema</li>
+			</ul>
+		</div>
+	</section>
+
+	<section>
+		<h2>Wordpress'i teemad</h2>
+		<div>
+			<ol>
+				<li>Programmerimine</li>
+				<li>Mobilirakendus</li>
+				<li>Robotika</li>
+				<li>Multimeedia</li>
+				<li>Ajalugu</li>
+				<li>Matemmatika</li>
+			</ol>
+		</div>
+	</section>
+
+	<section id="personal-info">
+		<h2>Minu andmed</h2>
+		<p><strong>Nimi:</strong> David</p>
+		<p><strong>Perekonnanimi:</strong> Lennuk</p>
+		<p><strong>Vanus:</strong> 17</p>
+		<p><strong>Pikkus:</strong> 178.5</p>
+	</section>
+
+	<section id="image-gallery">
+		<h2>Minu pildigalerii</h2>
+		<div id="images">
+			<!-- Pildid lisatakse siia -->
+		</div>
+		<button onclick="addImage()">Lisa pilt</button>
+		<button onclick="clearImages()">Kustuta pildid</button>
+	</section>
+</main>
+
+<footer>
+	<p>&copy;David 2024</p>
+</footer>
+
+<script>
+	function addImage() {
+		let imageContainer = document.getElementById("images");
+		let img = document.createElement("img");
+		img.src = prompt("Sisesta pildi URL:");
+		img.alt = "Minu pilt";
+		img.width = 300;
+		imageContainer.appendChild(img);
+	}
+
+	function clearImages() {
+		let imageContainer = document.getElementById("images");
+		imageContainer.innerHTML = '';
+	}
+</script>
 </body>
 </html>

@@ -10,6 +10,7 @@
 <header>
 	<h1>Seva veebirakenduste koduleht</h1>
 </header>
+<button onclick="toggleNightMode()">Lülita öörežiim</button>
 
 <nav>
 	<ul>
@@ -76,7 +77,6 @@
 <script>
 	let imageContainer = document.getElementById('imageContainer');
 
-	// Lisa pilt
 	function addImage() {
 		let img = document.createElement('img');
 		img.src = 'paike.png'; // Asenda oma pildi tee
@@ -85,11 +85,13 @@
 		imageContainer.appendChild(img);
 	}
 
-	// Kustuta viimane pilt
 	function removeImage() {
 		if (imageContainer.lastChild) {
 			imageContainer.removeChild(imageContainer.lastChild);
 		}
+	}
+	function toggleNightMode() {
+		document.body.classList.toggle('night-mode');
 	}
 </script>
 

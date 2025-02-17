@@ -53,6 +53,13 @@
 			<li>Ma olen 189 sm pikkus</li>
 		</ol>
 	</section>
+
+	<section>
+		<h2>Lisa või kustuta pilte</h2>
+		<button onclick="addImage()">Lisa pilt</button>
+		<button onclick="removeImage()">Kustuta pilt</button>
+		<div id="imageContainer"></div>
+	</section>
 </main>
 
 <footer>
@@ -65,5 +72,26 @@
 		</a>
 	</p>
 </footer>
+
+<script>
+	let imageContainer = document.getElementById('imageContainer');
+
+	// Lisa pilt
+	function addImage() {
+		let img = document.createElement('img');
+		img.src = 'paike.png'; // Asenda oma pildi tee
+		img.alt = 'Pilt';
+		img.width = 300; // Määrake sobiv laius
+		imageContainer.appendChild(img);
+	}
+
+	// Kustuta viimane pilt
+	function removeImage() {
+		if (imageContainer.lastChild) {
+			imageContainer.removeChild(imageContainer.lastChild);
+		}
+	}
+</script>
+
 </body>
 </html>

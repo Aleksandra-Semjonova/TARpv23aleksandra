@@ -4,3 +4,6 @@
 3. muuta saidi värviskeemi soovitud värvi.
 4. lisage osa, kuhu kirjutate oma andmed (nimi, perekonnanimi, vanus, pikkus).
 5. lisage nupp, et saaksite need pildid kustutada ja uusi lisada.
+
+
+6.lisada lehele veel üks teema, ükskõik milline teema.
